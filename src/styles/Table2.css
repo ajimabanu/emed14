@@ -1,19 +1,14 @@
 .tableTop{
-  
-    height: 150px;
-   width: 98%;
-
+    height: 200px;
+   width: 80%;
     display: flex;
-
     border: 0.5px solid grey;
- margin-left: -10px;
-
+ margin-left: 150px;
+ margin-top: 400px;
 }
 
-
 p{
-
-    color: #3185e5;
+  color: #3185e5;
     }
 
 .Tablecontent{
