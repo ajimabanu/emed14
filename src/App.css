@@ -1,16 +1,11 @@
-table {
- 
-  
-  
-    
+table {   
   overflow: hidden;
   margin-left: 120px;
   margin-top: 20px;
 }
 th,
 td {
-
-  align-items: left;
+ align-items: left;
   text-align: left;
   padding: 5px;
   line-height: 1;
@@ -30,8 +25,7 @@ td {
   padding-bottom: 5px;
 }
 .Table-box {
-
-  height: 400px;
+height: 400px;
   width: 60%;
   float: right;
   margin-top: 150px;
@@ -44,28 +38,7 @@ td {
   font-size: medium;
   font-family: "Verdana", sans-serif;
 }
-.bill {
-  border-radius: 5px;
-  transition: all 0.2s;
-  box-shadow: 10px 10px 5px #888888;
-  width: 100px;
-  height: 40px;
-  border: none;
-  color: white;
-  background-color: #4169E1;
-  margin-left: 20%;
-  margin-top: 0;
-}
-.bill:active {
-  transform: scale(0.9);
-  
-}
-.disease {
-  font-size: small;
-  font-family: "Verdana", sans-serif;
-  margin-left: 150px;
-}
-/* Style the tab */
+
 .tab {
   overflow: hidden;
 }
@@ -82,14 +55,9 @@ td {
 .closeIcon {
   cursor: pointer;
 }
-/* Style the tab content */
-.tabcontent {
-  display: none;
-}
-.division{
 
-  margin-left: -310px;
-}
+
+
 .codenotes{
   margin-left: -150px;
 

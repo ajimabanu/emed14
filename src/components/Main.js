@@ -144,10 +144,10 @@ export const Main = ({ isValueSelected }) =>
                 fontFamily={"sans-serif"}
                 color={" #4185d2"}
                 fontWeight={600}
-                ml={-28}
+              marginRight={100}
                 sx={{
                   borderBottom: "0.3px solid grey",
-                  width: "132%",
+                  width: "100%",
                 }}
               >
                 Code details
@@ -163,7 +163,8 @@ export const Main = ({ isValueSelected }) =>
                   overflowY: "scroll",
                   mt: "10px"
                 }}
-              >  <Tabeffect />   
+              > 
+              <Tabeffect/>  
               <Table2/>
               </Box>  
             </Stack>

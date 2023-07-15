@@ -34,7 +34,7 @@ export const Pagin = () => {
         <div class="pagination">
           {" "}
           {items.map((item, index) => (
-            <a key={index}>{item}</a>
+            <a className="pagi" key={index}>{item}</a>
           ))}
         </div>
       </div>

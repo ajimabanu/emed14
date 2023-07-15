@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState } from "react";
-
 
 const Chapternotes = () => {
   const [results, setResults] = useState(null);
@@ -22,54 +20,47 @@ const Chapternotes = () => {
       }
     };
     fetchBooks();
-  }, [global.values.code]);
+  }, [global.values]); // Change the dependency here
 
   console.log("our result is", results);
   const shouldDisplayClassification = (classification, index) => {
     if (index === 0) {
       return true;
     }
-    const previousClassifications = results.chapter.notes
+    const previousClassifications = results?.chapter?.notes
       .slice(0, index)
       .map((note) => note.classification);
-    return !previousClassifications.includes(classification);
+    return !previousClassifications?.includes(classification);
   };
   return (
     <div>
-      <div
-        style={{
-          marginTop: "50px",
-        }}
-      >
-     
-            {results && results.chapter && results.chapter.description ? (
-  <div key={results.code}>
-    <div style={{ marginLeft: "17px" }}>{results.chapter.description}</div>
-  </div>
-) : (
-  <div></div>
-)}
-        
-     
-            {results && results.chapter && results.chapter.notes ? (
-  results.chapter.notes
-    .sort((a, b) => a.classification.localeCompare(b.classification))
-    .map((note, index) => (
-      <div key={index}>
-        {index === 0 ||
-        note.classification !== results.chapter.notes[index - 1].classification ? (
-          <div style={{ padding: "10px 20px 20px 20px" }}>
-            <strong>{note.classification.toUpperCase()}</strong>:&nbsp;&nbsp;
-            {note.notes}
+      <div style={{ marginTop: "50px" }}>
+        {results && results.chapter && results.chapter.description ? (
+          <div key={results.code}>
+            <div style={{ marginLeft: "17px" }}>{results.chapter.description}</div>
           </div>
         ) : (
-          <div style={{ marginLeft: "110px" }}>{note.notes}</div>
+          <div></div>
         )}
-      </div>
-    ))
-) : (
-  <div>No chapter notes</div>
-)}
+
+        {results && results.chapter && results.chapter.notes ? (
+          results.chapter.notes
+            .sort((a, b) => a.classification.localeCompare(b.classification))
+            .map((note, index) => (
+              <div key={index}>
+                {shouldDisplayClassification(note.classification, index) ? (
+                  <div style={{ padding: "10px 20px 20px 20px" }}>
+                    <strong>{note.classification.toUpperCase()}</strong>:&nbsp;&nbsp;
+                    {note.notes}
+                  </div>
+                ) : (
+                  <div style={{ marginLeft: "110px" }}>{note.notes}</div>
+                )}
+              </div>
+            ))
+        ) : (
+          <div>No chapter notes</div>
+        )}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import  { useState } from 'react';
 import Codenotes from './Codenotes';
 import Sectionnotes from './Sectionnotes';
 import Chapternotes from './Chapternotes';
-import"../styles/Tabeffect.css"
+import '../styles/Tabeffect.css';
 
 const Tabeffect = () => {
  const [activeSlide, setActiveSlide] = useState(null);

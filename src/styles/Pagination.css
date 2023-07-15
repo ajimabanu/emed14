@@ -21,7 +21,7 @@
 }
 
 
- a:hover {
+.pagi:hover {
     background-color: #90B2D8;
     color: white;
     cursor: pointer;
